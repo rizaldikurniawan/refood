@@ -11,6 +11,62 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .content-row {
+            display: flex;
+        }
+        .content-img {
+            width: 100%;
+            min-height: 500px;
+            max-height: 500px;
+        }
+        .card {
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 0;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            z-index: 1;
+            border: 1px solid #007bff;
+        }
+
+        .card-container {
+            position: relative;
+        }
+
+        .card-container:hover .card {
+            filter: blur(2px);
+        }
+
+        .card-container:hover .card:hover {
+            filter: none;
+        }
+
+        .card-body {
+            max-height: 200px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-title {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,8 +77,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
@@ -39,6 +95,51 @@
             </div>
         </nav>
     </header>
+
+    <main class="container mt-5">
+        <div class="row content-row">
+            <div class="col-md-6">
+                <img src="img/banana.png" class="content-img" alt="Image">
+            </div>
+            <div class="col-md-3 mt-4">
+                <h2>Pisang</h2>
+            </div>
+            <div class="col-md-3 rounded">
+                <h1>Description</h1>
+                <h2>Pisang</h2>
+                <p>Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu.</p>
+                <a href="detail.html" class="btn btn-primary">Cara Pengolahan</a>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-2 text-center">
+                <div class="card">
+                    <img src="img/banana.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pisang</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-2 text-center">
+                <div class="card">
+                    <img src="img/kopi.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pisang</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 text-center">
+                <div class="card">
+                    <img src="img/banana.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pisang</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
