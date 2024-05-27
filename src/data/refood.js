@@ -1,7 +1,7 @@
 const refood = [
   {
       "id_limbah" : "limbah-1",
-      "Jenis": "Nasi Basi",
+      "jenis": "Nasi Basi",
       "deskripsi": "Nasi basi merupakan nasi yang telah berbau dan warnanya telah berubah sehingga tidak layak untuk dikonsumsi.",
       "cara_pengolahan": [
         {
