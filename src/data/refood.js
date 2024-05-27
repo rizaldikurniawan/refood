@@ -1,4 +1,4 @@
-const notesData = [
+const refood = [
   {
       "Jenis": "Nasi Basi",
       "deskripsi": "Nasi basi merupakan nasi yang telah berbau dan warnanya telah berubah sehingga tidak layak untuk dikonsumsi.",
