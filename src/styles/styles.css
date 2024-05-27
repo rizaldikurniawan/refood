@@ -9,6 +9,13 @@ body {
   height: 100vh;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .container {
   background-color: #fff;
   border-radius: 10px;
