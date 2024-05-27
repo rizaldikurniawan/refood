@@ -1,66 +1,87 @@
-const refood = [
+const Refood = [
     {
-        "Nasi_Basi": {
-            "Jenis": "Nasi Basi",
-            "Deskripsi": "Nasi basi merupakan nasi yang telah berbau dan warnanya telah berubah sehingga tidak layak untuk dikonsumsi.",
-            "Cara_Pengolahan": "Pupuk dari Nasi Basi. Alat yang dibutuhkan yaitu Talenan, pisau, Wadah atau baskom, Toples atau wadah kecil, Saringan, dan Torong Pengaduk. Bahan yang dibutuhkan yaitu Air 500 ml, Gula jawa 100 gr, dan Nasi basi 200 gr. Proses fermentasi: Siapkan wadah kecil, lalu kepal nasi basi dan masukkan ke wadah yang sudah disiapkan. selanjutnya tutup wadah dan letakkan di tempat yang gelap. Kemudian biarkan 2-5 hari. Setelah 3-5 hari didiamkan, maka nasi basi akan ditumbuhi jamur yang disebut rizops. Ini merupakan jamur yang banyak ditemukan pada tanah, buah, dan sayur. Campurkan semua bahan: siapkan baskom lalu masukkan 500 ml air. Selanjutnya, iris tipis gula jawa menggunakan pisau dan talenan agar mudah dilarutkan ke dalam air. Kemudian, aduk semua bahan menggunakan alat pengaduk yang sudah disiapkan hingga gula jawa larut. Jika gula jawa sudah larut, langkah selanjutnya adalah masukan nasi basi yang sudah berjamur ke dalam larutan lalu aduk hingga tercampur rata. Masukkan semua bahan yang sudah tercampur ke dalam botol ukuran 1,5 liter menggunakan corong. Diamkan selama 2-3 hari di tempat yang gelap agar mikroorganisme di dalamnya semakin banyak dan tanaman subur. Siap digunakan Kini: kamu sudah bisa menggunakan pupuk organik dari nasi bekas tersebut untuk menyuburkan tanaman. Disarankan untuk memakai komposisi 100 ml pupuk organik dilarutkan ke dalam 10 liter air dan gula jawa cair 50 ml. Biasanya, untuk satu tanaman membutuhkan 200-300 ml pupuk organik cair."
-        },
-        "Kulit_Pisang": {
-            "Jenis": "Kulit Pisang",
-            "Deskripsi": "Setelah mengkonsumsi pisang biasanya seseorang pasti membuang kulit pisang sehingga terbuang percuma.",
-            "Cara_Pengolahan": "Membuat pupuk organik cair dari kulit pisang. Bahan bahan yang dibutuhkan yaitu : Kulit pisang, Gula Pasir, Air bersih, Botol bekas. Tahap pembuatan : Pertama, bersihkan dahulu botol-botol bekas yang akan digunakan. Kedua, kulit pisang dihaluskan dengan cara diblender. Namun jika tidak ada blender, bisa dengan cara mencincang kulit pisang menjadi potongan yang sangat sangat kecil. Selanjutnya, gula pasir dimasukkan kedalam botol dengan perbandingan gula pasir : volume botol (1 sendok : 250 ml). Gula tersebut dilarutkan dengan air bersih di dalam botol (volume air bebas). Kulit pisang yang telah dihaluskan, dimasukkan ke dalam botol bekas yang telah berisi larutan gula pasir. Selanjutnya air ditambahkan kedalam botol hingga batas leher botol. Setelah itu botol dapat ditutup dengan rapat dan setelah itu didiamkan lebih dari 7-10 hari. Tutup botol dibuka setiap hari agar gas yang terkandung di dalam botol dapat keluar. Pupuk pun dapat langsung digunakan pada tanaman setelah didiamkan lebih dari 7 hari."
-        },
-        "Ampas_Kopi": {
-            "Jenis": "Ampas Kopi",
-            "Deskripsi": "Kopi sering kali digunakan di berbagai olahan makanan, namun banyak orang yang membuang ampas kopi begitu saja.",
-            "Cara_Pengolahan": "Untuk membuat scrub dari limbah ampas kopi cukup mudah dan dapat dilakukan dirumah. Berikut bahan untuk membuat scrub dari ampas kopi: Ampas kopi, Minyak kelapa, Garam, Sedikit air, Essential oil (sesuai selera). Langkah-langkah membuat scrub dari limbah ampas kopi : 1. Keringkan limbah ampas kopi di tempat terbuka atau dibawah sinar matahari. 2. Siapkan wadah untuk mencampur. 3. Campurkan semua bahan hingga mencapai konsistensi yang diinginkan. 4. Teteskan essential oil untuk memberi aroma pada scrub. 5. Scrub siap digunakan. 6. Simpan scrub ditempat yang kering dan gunakan wadah kedap udara untuk penyimpanan."
-        },
-        "Kulit_Apel": {
-            "Jenis": "Kulit Apel",
-            "Deskripsi": "Jika seseorang memakan apel kebanyakan orang akan membuang kulit apel, padahal kulit apel bisa diolah untuk dikonsumsi.",
-            "Cara_Pengolahan": "Kulit apel bisa diolah menjadi kerupuk panggang yang renyah. Cara membuatnya pun mudah. Kamu bisa mencampur kulit apel dengan mentega cair dan gula kayu manis, lalu memanggang nya hingga kecoklatan dan matang."
-        },
-        "Cangkang_Telur": {
-            "Jenis": "Cangkang Telur",
-            "Deskripsi": "Olahan telur sering kali kita konsumsi namun tanpa disadari cangkang telur yang kita konsumsi dapat menyebabkan bertambahnya limbah makanan.",
-            "Cara_Pengolahan": "Cara membuat pupuk organik dari cangkang telur : Bersihkan cangkang telur yang akan dibuat pupuk. Sterilkan cangkang telur dengan memasukkan ke dalam air panas. Keringkan cangkang telur dengan cara dijemur. Tumbuk cangkang telur hingga menjadi serpihan halus. Campurkan cangkang telur dengan air ke dalam botol bekas. Tambahkan gula jawa dan EM4 dengan perbandingan 1:1 ke dalam botol. Tutup botol bekas dan campurkan pupuk dengan cara mengocok botol. Diamkan selama 10-14 hari untuk memaksimalkan proses fermentasi. Bila perlu, sesekali buka tutup botol bekas supaya gas yang ditimbulkan selama proses fermentasi dapat keluar. Cara lain juga dapat langsung menaburkan serpihan cangkang telur di atas tanaman."
-        },
-        "Susu_Basi": {
-            "Jenis": "Susu Basi",
-            "Deskripsi": "Sering kali kita temukan jika seorang lupa bahwa ia memiliki susu yang telah disimpan sejak lama sehingga susu tersebut basi.",
-            "Cara_Pengolahan": "Membuat keju cottage dari susu yang sudah busuk. Caranya adalah dengan memasak susu yang sudah basi dalam panci ganda di atas air mendidih hingga mulai menjadi whey (saat bagian susu yang encer terpisah dari dadih, atau keju). Tambahkan cuka atau air lemon agar susu yang menjadi keju terpisah dengan whey. Gunakan handuk sebagai saringan untuk menghilangkan kelebihan susu serta memisahkan whey dan keju. Simpan di dalam lemari es selama beberapa jam agar keju mengendap dan dingin. Setelah itu, tambahkan sedikit krim, garam, dan merica sesuai selera. Anda bisa menikmati keju cottage dengan hidangan apa pun."
-        },
-        "Ampas_Teh_Hijau": {
-            "Jenis": "Ampas Teh Hijau",
-            "Deskripsi": "Ampas yang tersisa setelah menyeduh teh hijau. Kaya akan antioksidan dan zat-zat aktif lainnya yang bermanfaat untuk kulit.",
-            "Cara_Pengolahan": "Ampas teh hijau dapat memperbaiki warna kulit, menghilangkan flek hitam akibat polutan yang menempel di wajah, dan mengelupas sel kulit mati untuk merevitalisasi kulit. Kamu dapat memanfaatkannya sebagai masker, dengan cara: Ambil dua kantong teh hijau yang sudah terpakai. Keluarkan ampas teh dari kantong teh. Tambahkan dua hingga empat sendok makan madu. Campurkan jus lemon. Oleskan pada wajah dan tunggu 5 hingga 10 menit setelah merata di wajah. Menggunakan air hangat untuk membilas. Gunakan masker ini sekali atau dua kali setiap minggu."
-        },
-        "Kulit_Wortel": {
-            "Jenis": "Kulit Wortel",
-            "Deskripsi": "Kulit tipis yang biasanya dibuang saat memotong wortel. Kaya akan serat dan nutrisi lainnya yang baik untuk kesehatan pencernaan dan kulit.",
-            "Cara_Pengolahan": "Buat Keripik Iris tipis kulit wortel dan panggang di oven hingga kering untuk membuat keripik wortel. Anda juga bisa menambahkan sedikit minyak zaitun dan rempah-rempah untuk memberikan rasa yang lebih menarik."
-        },
-        "Ikan_Busuk": {
-            "Jenis": "Ikan Busuk",
-            "Deskripsi": "Ikan yang sudah mengalami proses pembusukan alami atau disengaja. Biasanya menghasilkan rasa yang khas dan unik setelah diolah dengan bumbu dan rempah-rempah tertentu.",
-            "Cara_Pengolahan": "Mengolah ikan busuk menjadi lauk langka yang bernama Babutuk. Cara membuat babutuk dimulai dari membuang isi perutnya, merebus ikan-ikan besar yang busuk tadi lalu dibuang tulang-tulangnya. Hasilnya adalah daging ikan busuk yang sudah matang namun berair. Selanjutnya haluskan bumbu masak berupa kunir, laos, sereh, kemiri, garam, asam daun kalamenyu, lombok merah, apabila perlu siapkan santan dan gula. Semua bumbu dihaluskan lalu dimasukkan ke dalam daging ikan, dicampur merata dan rebus sambil diaduk sehingga airnya mengering. Daun asam kalamenyu yang dicincang tersendiri dimasukkan agak terakhir ketika ikan hampir matang. Apabila bubur ikan sudah mendekati kering dan rasanya sudah pas antara asin dan asamnya makan siaplah babutuk dijadikan lauk makan menemani nasi. Bentuk akhir babutuk adalah seperti abon namun basah."
-        },
-        "Biji_dan_Kulit_Salak": {
-            "Jenis": "Biji dan Kulit Salak",
-            "Deskripsi": "Biji dan kulit salak yang telah dikumpulkan setelah mengkonsumsi buah salak. Kaya akan serat dan antioksidan yang baik untuk kesehatan",
-            "Cara_Pengolahan": "Pengolahan produk kopi dan teh dari limbah salak ini memiliki proses yang mudah dan dapat dilakukan pada skala rumahan. Proses pembuatan kopi dan teh diawali dengan mencuci biji dan kulit salak yang telah dikumpulkan. Setelah itu, dilakukan pengecilan ukuran menggunakan pisau dan gunting yang selanjutnya di oven selama 30 menit untuk menghilangkan kadar air. Biji salak yang telah kering disangrai agar aroma dan juga citarasa kopi keluar. Tahap akhir pada pembuatan kopi adalah proses penggilingan biji menjadi bubuk kopi. Untuk pembuatan teh, kulit salak yang telah di oven akan dilakukan penggilingan hingga menjadi bubuk menggunakan alat blender."
-        },
-        "Kulit_Bawang": {
-            "Jenis": "Kulit Bawang",
-            "Deskripsi": "Kulit yang biasanya dibuang saat memotong bawang putih, bawang merah, atau bawang bombay. Kaya akan antioksidan dan flavonoid yang bermanfaat untuk kesehatan.",
-            "Cara_Pengolahan": "Membuat olahan keripik dari limbah kulit bawang putih/bawang merah/bawang bombay. Langkah-langkah pembuatan: Cuci bersih kulit, keringkan. Letakkan kulit bawang putih ke dalam wadah untuk memanggang. Tambahkan olive oil secukupnya. Taburkan sedikit garam atau sesuai selera, aduk rata. Panggang selama 10 menit pada suhu 200 derajat Celcius, sampai berubah menjadi keripik yang renyah dan garing. Cek secara berkala karena kulit bawang mudah hangus. Tadaaa, keripiknya bisa langsung disantap. Atau, jadi topping salad, sup, dan pasta."
-        },
-        "Kulit_Jeruk": {
-            "Jenis": "Kulit Jeruk",
-            "Deskripsi": "Kulit jeruk yang telah dipisahkan dari buahnya. Mengandung minyak esensial yang dapat digunakan sebagai pembersih alami dan juga dapat diolah menjadi pupuk.",
-            "Cara_Pengolahan": "Kulit jeruk dapat diolah menjadi pembersih ramah lingkungan. Cara membuat: Simpan kulit jeruk ke dalam toples kaca. Isi toples dengan cuka putih (white vinegar) dan biarkan selama dua minggu. Letakkan di atas meja sehingga bisa jadi hiasan ruangan juga. Setelah dua minggu saring cairannya. Masukkan sisa kulit jeruk ke dalam komposter untuk diolah menjadi pupuk. Campur air dengan cuka, perbandingannya 2:1. Tuangkan ke dalam botol semprot untuk membersihkan permukaan secara alami. Pembersih DIY siap digunakan, deh."
-        }
+      "id": "waste-1",
+      "title": "Nasi Basi",
+      "body": "Nasi basi merupakan nasi yang telah berbau dan warnanya telah berubah sehingga tidak layak untuk dikonsumsi. Proses fermentasi: Siapkan wadah kecil, lalu kepal nasi basi dan masukkan ke wadah yang sudah disiapkan. selanjutnya tutup wadah dan letakkan di tempat yang gelap. Kemudian biarkan 2-5 hari. Setelah 3-5 hari didiamkan, maka nasi basi akan ditumbuhi jamur yang disebut rizops. Ini merupakan jamur yang banyak ditemukan pada tanah, buah, dan sayur.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-2",
+      "title": "Kulit Pisang",
+      "body": "Setelah mengkonsumsi pisang biasanya seseorang pasti membuang kulit pisang sehingga terbuang percuma. Pembuatan pupuk organik cair dari kulit pisang.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-3",
+      "title": "Ampas Kopi",
+      "body": "Kopi sering kali digunakan di berbagai olahan makanan, namun banyak orang yang membuang ampas kopi begitu saja. Untuk membuat scrub dari limbah ampas kopi cukup mudah dan dapat dilakukan dirumah.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-4",
+      "title": "Kulit Apel",
+      "body": "Jika seseorang memakan apel kebanyakan orang akan membuang kulit apel, padahal kulit apel bisa diolah untuk dikonsumsi. Kulit apel bisa diolah menjadi kerupuk panggang yang renyah.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-5",
+      "title": "Cangkang Telur",
+      "body": "Olahan telur sering kali kita konsumsi namun tanpa disadari cangkang telur yang kita konsumsi dapat menyebabkan bertambahnya limbah makanan. Cara membuat pupuk organik dari cangkang telur.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-6",
+      "title": "Susu Basi",
+      "body": "Sering kali kita temukan jika seorang lupa bahwa ia memiliki susu yang telah disimpan sejak lama sehingga susu tersebut basi. Membuat keju cottage dari susu yang sudah busuk.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-7",
+      "title": "Ampas Teh Hijau",
+      "body": "Ampas yang tersisa setelah menyeduh teh hijau. Kaya akan antioksidan dan zat-zat aktif lainnya yang bermanfaat untuk kulit. Kamu dapat memanfaatkannya sebagai masker.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-8",
+      "title": "Kulit Wortel",
+      "body": "Kulit tipis yang biasanya dibuang saat memotong wortel. Kaya akan serat dan nutrisi lainnya yang baik untuk kesehatan pencernaan dan kulit. Buat Keripik.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-9",
+      "title": "Ikan Busuk",
+      "body": "Ikan yang sudah mengalami proses pembusukan alami atau disengaja. Biasanya menghasilkan rasa yang khas dan unik setelah diolah dengan bumbu dan rempah-rempah tertentu. Mengolah ikan busuk menjadi lauk langka yang bernama Babutuk.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-10",
+      "title": "Biji dan Kulit Salak",
+      "body": "Biji dan kulit salak yang telah dikumpulkan setelah mengkonsumsi buah salak. Kaya akan serat dan antioksidan yang baik untuk kesehatan. Pengolahan produk kopi dan teh dari limbah salak ini memiliki proses yang mudah dan dapat dilakukan pada skala rumahan.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-11",
+      "title": "Kulit Bawang",
+      "body": "Kulit yang biasanya dibuang saat memotong bawang putih, bawang merah, atau bawang bombay. Kaya akan antioksidan dan flavonoid yang bermanfaat untuk kesehatan. Membuat olahan keripik dari limbah kulit bawang putih/bawang merah/bawang bombay.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
+    },
+    {
+      "id": "waste-12",
+      "title": "Kulit Jeruk",
+      "body": "Kulit jeruk yang telah dipisahkan dari buahnya. Mengandung minyak esensial yang dapat digunakan sebagai pembersih alami dan juga dapat diolah menjadi pupuk. Kulit jeruk dapat diolah menjadi pembersih ramah lingkungan.",
+      "createdAt": "2024-05-27T00:00:00.000Z",
+      "archived": false
     }
-];
-
-export default refood;
+  ];
+  
