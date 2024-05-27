@@ -85,3 +85,10 @@ const Refood = [
     }
   ];
   
+  class Refoods {
+    static getAll() {
+      return Refood;
+    }
+  }
+  
+  export default Refoods;
