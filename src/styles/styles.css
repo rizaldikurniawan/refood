@@ -162,3 +162,11 @@ figcaption p {
 .card-title {
   margin-bottom: 0;
 }
+
+.list-pengolahan{
+  display: grid;
+
+  grid-template-columns: 1fr 1fr; 
+  column-gap: 24px;
+}
+
