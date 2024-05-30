@@ -102,6 +102,25 @@
         margin-right: -60px; /* Sesuaikan jarak kanan sesuai kebutuhan */
       }
 
+      #judul{
+        color: antiquewhite;
+        font-weight: bold;
+        font-size: 60px;
+      }
+
+      #description{
+        margin: 0;
+        position: relative;
+      }
+
+      #cara-pengolahan{
+       background-color: #4F6F52;
+      }
+
+      .teks{
+        color: #1A4D2E;
+      }
+
     </style>
   </head>
   <body>
@@ -133,19 +152,19 @@
     <main class="container mt-5">
       <div class="row content-row">
         <div class="col-md-6">
-          <img id="imageBanner" src="../public/img/kulit-pisang.png" alt="Image" />
+          <img id="imageBanner" src="../public/img/jenis/banana.png" alt="Image" />
         </div>
         <div class="col-md-3 mt-4">
-          <h2>Kulit Pisang</h2>
+          <h2 id="judul">Kulit Pisang</h2>
         </div>
         <div class="col-md-3 rounded card" id="description">
-          <h1>Description</h1>
-          <h2>Kulit Pisang</h2>
-          <p>
+          <h1 class="teks">Description</h1>
+          <h2 class="teks">Kulit Pisang</h2>
+          <p class="teks">
             Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus
             lacus ornare ante, ac egestas est urna sit amet arcu.
           </p>
-          <a href="detail.html" class="btn btn-primary">Cara Pengolahan</a>
+          <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
         </div>
       </div>
 
@@ -157,21 +176,35 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item">
-            <img src="../public/img/ampas kopi.png" class="d-block w-100" alt="First slide">
+            <img src="../public/img/jenis/Nasi.png" class="d-block w-100" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Label Slide 1</h5>
               <p>Konten representatif untuk slide pertama.</p>
             </div>
           </div>
           <div class="carousel-item active">
-            <img src="../public/img/nasi.png" class="d-block w-100" alt="Second slide">
+            <img src="../public/img/jenis/banana.png" class="d-block w-100" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Label Slide 2</h5>
               <p>Konten representatif untuk slide kedua.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../public/img/teh.png" class="d-block w-100" alt="Third slide">
+            <img src="../public/img/jenis/kopi.png" class="d-block w-100" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Label Slide 3</h5>
+              <p>Konten representatif untuk slide ketiga.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../public/img/jenis/apel.png" class="d-block w-100" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Label Slide 3</h5>
+              <p>Konten representatif untuk slide ketiga.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../public/img/jenis/telur.png" class="d-block w-100" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Label Slide 3</h5>
               <p>Konten representatif untuk slide ketiga.</p>
