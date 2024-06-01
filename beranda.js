@@ -1,1 +1,1 @@
-gsap.to('#imageBanner', { duration: 1.5, x: 200 });
+gsap.to('.banner', { duration: 3, x: 200 });
