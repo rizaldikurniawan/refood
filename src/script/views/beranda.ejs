@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReFood | Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <style>
+       body {
+        font-family: Arial, sans-serif;
+        background-image: url('/img/backgroundWeb.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .content-row {
+        display: flex;
+      }
+      .content-img {
+        width: 100%;
+        min-height: 500px;
+        max-height: 500px;
+      }
+
+      .item {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: all 0.4s ease;
+        position: relative;
+        z-index: 0;
+        margin: 2%;
+        max-width: 20%;
+        background-color: #1a676f;
+      }
+
+      .item:hover {
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        z-index: 1;
+        transform: scale(1.09);
+      }
+
+      .card-body {
+        max-height: 200px;
+        overflow: hidden;
+      }
+
+      .card-img-top {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card-title {
+        margin-bottom: 0;
+      }
+
+      #description {
+        padding: 2%;
+        position: fixed;
+      }
+
+      #imageBanner {
+        width: 55%;
+      }
+
+      .item {
+        width: 200px;
+      }
+
+      #judul {
+        color: antiquewhite;
+        font-weight: bold;
+        font-size: 60px;
+      }
+
+      #description {
+        margin: 0;
+        position: relative;
+      }
+
+      #cara-pengolahan {
+        background-color: #4f6f52;
+        border: none;
+      }
+
+      .teks {
+        color: #1a4d2e;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: transparent;
+        border: none;
+      }
+
+      .carousel-control-prev {
+        margin-left: -80px;
+      }
+
+      .carousel-control-next {
+        margin-right: -80px;
+      }
+
+      .carousel-item .row {
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel-item .col-md-4 {
+        flex: 1 0 33.333%;
+        padding: 5px;
+      }
+
+      .gambar {
+        width: 100%;
+        max-height: 100px;
+        object-fit: contain;
+        display: block;
+        margin-top: 10%;
+      }
+
+      .carousel-caption{
+        position: relative;
+        margin-right: 30%;
+      }
+
+      .judul-item{
+        font-size: 15px;
+        margin: 8%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ReFood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/beranda">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= username %></a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-5">
+      <div class="row content-row">
+        <div class="col-md-6">
+          <img id="imageBanner" class="up-layar" src="/img/jenis/banana.png" alt="Image" />
+        </div>
+        <div class="col-md-3 mt-4">
+          <h1 id="judul">Kulit Pisang</h1>
+        </div>
+        <div class="col-md-3 rounded card" id="description">
+          <h1 class="teks">Deskripsi</h1>
+          <h2 class="teks"><b>Kulit Pisang</b></h2>
+          <p class="teks">
+            Setelah mengonsumsi pisang, biasanya kulitnya dibuang begitu saja.
+          </p>
+          <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+        </div>
+      </div>
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4 item">
+                <img src="/img/jenis/Nasi.png" class="d-block w-100 gambar" alt="First slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Nasi Basi</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/banana.png" class="d-block w-100 gambar" alt="Second slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Kulit Pisang</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/kopi.png" class="d-block w-100 gambar" alt="Third slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Ampas Kopi</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4 item">
+                <img src="/img/jenis/apel.png" class="d-block w-100 gambar" alt="Fourth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Kulit Apel</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/telur.png" class="d-block w-100 gambar" alt="Fifth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Cangkang Telur</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/susu.png" class="d-block w-100 gambar" alt="Sixth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Susu Basi</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4 item">
+                <img src="/img/jenis/teh.png" class="d-block w-100 gambar" alt="Seventh slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Ampas Teh Hijau</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/wortel.png" class="d-block w-100 gambar" alt="Eighth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Kulit Wortel</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/ikan.png" class="d-block w-100 gambar" alt="Ninth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Ikan Busuk</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4 item">
+                <img src="/img/jenis/salak.png" class="d-block w-100 gambar" alt="Tenth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Biji dan Kulit Salak</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/bawang.png" class="d-block w-100 gambar" alt="Eleventh slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Kulit Bawang</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+              <div class="col-md-4 item">
+                <img src="/img/jenis/jeruk.png" class="d-block w-100 gambar" alt="Twelfth slide" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="judul-item">Kulit Jeruk</h5>
+                  <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/animasi/gsap.js"></script>
+  </body>
+</html>
