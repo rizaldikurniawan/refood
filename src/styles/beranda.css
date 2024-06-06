@@ -1,0 +1,126 @@
+body {
+  background-image: url('../public/img/backgroundWeb.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Acme', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content-row {
+  display: flex;
+}
+.content-img {
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
+}
+.item {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 0;
+  margin: 2%;
+  max-width: 20%;
+  background-color: #1a676f;
+}
+.item:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  z-index: 1;
+  transform: scale(1.09);
+}
+
+.card {
+  background-color: #88e9d0ff;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#imageBanner {
+  /* transition: all 0.4s ease; */
+  width: 55%;
+}
+/* 
+#imageBanner:hover {
+  transform: scale(1.5);
+}  */
+
+.card-body {
+  max-height: 200px;
+  overflow: hidden;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-title {
+  margin-bottom: 0;
+}
+#description {
+  padding: 2%;
+}
+
+.item {
+  width: 200px;
+}
+#judul {
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 60px;
+}
+#description {
+  margin: 0;
+  position: relative;
+}
+#cara-pengolahan {
+  background-color: #4f6f52;
+  border: none;
+}
+.teks {
+  color: #1a4d2e;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+  border: none;
+}
+.carousel-control-prev {
+  margin-left: -80px;
+}
+.carousel-control-next {
+  margin-right: -80px;
+}
+.carousel-item .row {
+  display: flex;
+  justify-content: center;
+}
+.carousel-item .col-md-4 {
+  flex: 1 0 33.333%;
+  padding: 5px;
+}
+.gambar {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  display: block;
+  margin-top: 10%;
+}
+.carousel-caption {
+  position: relative;
+  margin-right: 30%;
+}
+.judul-item {
+  font-size: 15px;
+  margin: 8%;
+}
+.navbar {
+  background-color: transparent;
+  font-size: 20px;
+}
