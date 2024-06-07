@@ -1,22 +1,23 @@
-import refood from '../data/refood';
+document.addEventListener("DOMContentLoaded", function () {
+  const baseUrl = "http://47.129.7.148:5000";
 
-  const dataRefood = [];
-  const RENDER_EVENT = 'render-refood';
+  const getRefood = () => {
+    fetch(`${baseUrl}/refood`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJson) => {
+        if (responseJson.error) {
+          showMessageError(responseJson.message);
+        } else {
+          // renderRefood(responseJson.data);
+          console.log(responseJson.data);
+        }
+      })
+      .catch((error) => {
+        showMessageError(error.message);
+      });
+  };
 
-  refood.forEach(data => {
-    data.cara_pengolahan.forEach(olah => {
-        const itemRefood = {
-          id_limbah: data.id_limbah,
-          jenis: data.jenis,
-          deskripsi: data.deskripsi,
-          id_pengolahan: olah.id_pengolahan,
-          teks: olah.teks,
-          id_user: olah.id_user,
-          nama_lengkap: olah.nama_lengkap,
-        };
-
-    dataRefood.push(itemRefood);
-  });
+  getRefood();
 });
-
-  console.log(dataRefood);
