@@ -14,9 +14,8 @@ export function createJumbotron(data) {
       <div class="col-md-2">
         <h1 id="judul">${jenis}</h1>
       </div>
-      <div class="col-md-3 rounded card" id="description">
-        <h1 class="teks">Deskripsi</h1>
-        <h2 class="teks"><b>${jenis}</b></h2>
+      <div class="col-md-3 rounded" id="description">
+        <h1 class="teks"><b>${jenis}</b></h1>
         <p class="teks">${deskripsi}</p>
         <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
       </div>
