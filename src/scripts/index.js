@@ -1,3 +1,5 @@
+import 'regenerator-runtime';
+
 import { createCard } from './components/CardComponent';
 import { createJumbotron } from './components/JumbotronComponent';
 import '../styles/main.css';
