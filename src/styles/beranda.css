@@ -42,12 +42,14 @@ body {
 
 #imageBanner {
   /* transition: all 0.4s ease; */
-  width: 55%;
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0 auto;
 }
 /* 
 #imageBanner:hover {
   transform: scale(1.5);
-}  */
+}   */
 
 .card-body {
   max-height: 200px;
@@ -65,6 +67,7 @@ body {
 }
 #description {
   padding: 2%;
+  min-height: 300px;
 }
 
 .item {

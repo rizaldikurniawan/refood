@@ -17,7 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
     <link rel="stylesheet" href="../styles/beranda.css" />
-
   </head>
   <body>
     <header>
@@ -68,23 +67,23 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-image="../public/img/jenis/Nasi.png" data-title="Nasi Basi" data-description="Nasi basi yang bisa diolah menjadi berbagai produk.">
+          <div class="carousel-item active">
             <div class="row">
-              <div class="col-md-4 item">
+              <div class="col-md-4 item" data-image="../public/img/jenis/Nasi.png" data-title="Nasi Basi" data-description="Nasi basi merupakan nasi yang telah berbau dan warnanya telah berubah sehingga tidak layak untuk dikonsumsi.">
                 <img src="../public/img/jenis/Nasi.png" class="d-block w-100 gambar" alt="First slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Nasi Basi</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div class="col-md-4 item" data-image="../public/img/jenis/banana.png" data-title="Kulit Pisang" data-description="Setelah mengonsumsi pisang, biasanya kulitnya dibuang begitu saja.">
                 <img src="../public/img/jenis/banana.png" class="d-block w-100 gambar" alt="Second slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Kulit Pisang</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div class="col-md-4 item" data-image="../public/img/jenis/kopi.png" data-title="Ampas Kopi" data-description="Kopi sering kali digunakan dalam berbagai olahan makanan, namun ampas kopi seringkali dibuang begitu saja.">
                 <img src="../public/img/jenis/kopi.png" class="d-block w-100 gambar" alt="Third slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Ampas Kopi</h5>
@@ -95,21 +94,26 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-4 item">
+              <div class="col-md-4 item" data-image="../public/img/jenis/apel.png" data-title="Kulit Apel" data-description="Jika seseorang memakan apel, kebanyakan kulitnya akan dibuang, padahal kulit apel bisa diolah untuk dikonsumsi.">
                 <img src="../public/img/jenis/apel.png" class="d-block w-100 gambar" alt="Fourth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Kulit Apel</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/telur.png"
+                data-title="Cangkang Telur"
+                data-description="Cangkang telur yang sering kali dibuang setelah mengonsumsi telur dapat menyebabkan bertambahnya limbah makanan."
+              >
                 <img src="../public/img/jenis/telur.png" class="d-block w-100 gambar" alt="Fifth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Cangkang Telur</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div class="col-md-4 item" data-image="../public/img/jenis/susu.png" data-title="Susu Basi" data-description="Susu yang telah disimpan terlalu lama hingga basi.">
                 <img src="../public/img/jenis/susu.png" class="d-block w-100 gambar" alt="Sixth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Susu Basi</h5>
@@ -120,21 +124,36 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/teh.png"
+                data-title="Ampas Teh Hijau"
+                data-description="Ampas yang tersisa setelah menyeduh teh hijau, kaya akan antioksidan dan zat-zat aktif lainnya yang bermanfaat untuk kulit."
+              >
                 <img src="../public/img/jenis/teh.png" class="d-block w-100 gambar" alt="Seventh slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Ampas Teh Hijau</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/wortel.png"
+                data-title="Kulit Wortel"
+                data-description="Kulit tipis yang biasanya dibuang saat memotong wortel. Kaya akan serat dan nutrisi lainnya yang baik untuk kesehatan pencernaan dan kulit."
+              >
                 <img src="../public/img/jenis/wortel.png" class="d-block w-100 gambar" alt="Eighth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Kulit Wortel</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/ikan.png"
+                data-title="Ikan Busuk"
+                data-description="Ikan yang sudah mengalami proses pembusukan alami atau disengaja, biasanya menghasilkan rasa yang khas dan unik setelah diolah dengan bumbu dan rempah-rempah tertentu."
+              >
                 <img src="../public/img/jenis/ikan.png" class="d-block w-100 gambar" alt="Ninth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Ikan Busuk</h5>
@@ -145,21 +164,36 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/salak.png"
+                data-title="Biji dan Kulit Salak"
+                data-description="Biji dan kulit salak yang telah dikumpulkan setelah mengonsumsi buah salak, kaya akan serat dan antioksidan yang baik untuk kesehatan."
+              >
                 <img src="../public/img/jenis/salak.png" class="d-block w-100 gambar" alt="Tenth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Biji dan Kulit Salak</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/bawang.png"
+                data-title="Kulit Bawang"
+                data-description="Kulit yang biasanya dibuang saat memotong bawang putih, bawang merah, atau bawang bombay, kaya akan antioksidan dan flavonoid yang bermanfaat untuk kesehatan."
+              >
                 <img src="../public/img/jenis/bawang.png" class="d-block w-100 gambar" alt="Eleventh slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Kulit Bawang</h5>
                   <a href="detail.html" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
                 </div>
               </div>
-              <div class="col-md-4 item">
+              <div
+                class="col-md-4 item"
+                data-image="../public/img/jenis/jeruk.png"
+                data-title="Kulit Jeruk"
+                data-description="Kulit jeruk yang telah dipisahkan dari buahnya, mengandung minyak esensial yang dapat digunakan sebagai pembersih alami dan juga dapat diolah menjadi pupuk."
+              >
                 <img src="../public/img/jenis/jeruk.png" class="d-block w-100 gambar" alt="Twelfth slide" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="judul-item">Kulit Jeruk</h5>
