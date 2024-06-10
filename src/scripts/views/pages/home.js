@@ -63,16 +63,12 @@ const Home = {
           <div class="col-md-3 rounded" id="description">
             <h1 class="teks"><b>${item.jenis}</b></h1>
             <p class="teks">${item.deskripsi}</p>
-            <a href="/detail.html?id=${item.idLimbah}" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+            <a href="#/detail.html/${item.idLimbah}" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
           </div>
         `;
         return jumbotron;
       };
 
-      // Mendapatkan indeks item yang akan ditampilkan pertama kali
-      const initialSlideIndex = refoods.findIndex(item => item.idLimbah === refoods[0].idLimbah);
-
-      // Inisialisasi Swiper instance hanya dengan item yang ditampilkan
       const refoodSlider = new Swiper('.refood-slider', {
         effect: 'slide',
         grabCursor: true,
