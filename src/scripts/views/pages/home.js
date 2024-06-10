@@ -24,7 +24,7 @@ const Home = {
   async afterRender() {
     try {
       const refoodsData = await RefoodsSource.getAllRefoods();
-      console.log('API response:', refoodsData);
+      console.log('API response:', refoodsData); // Log the API response
 
       if (!refoodsData || !refoodsData.data || !Array.isArray(refoodsData.data.refoods)) {
         throw new Error('Invalid data structure');
@@ -36,7 +36,7 @@ const Home = {
 
       const createCard = (item) => {
         const card = document.createElement('div');
-        card.classList.add('refood-slide', 'swiper-slide');
+        card.classList.add('refood-slide');
         card.innerHTML = `
           <div class="refood-slide-img">
             <img src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.png" alt="${item.jenis}">
@@ -69,11 +69,15 @@ const Home = {
         return jumbotron;
       };
 
-      const refoodSlider = new Swiper('.refood-slider', {
+      // Mendapatkan indeks item yang akan ditampilkan pertama kali
+      const initialSlideIndex = refoods.findIndex(item => item.idLimbah === refoods[0].idLimbah);
+
+      // Inisialisasi Swiper instance hanya dengan item yang ditampilkan
+      let refoodSlider = new Swiper('.refood-slider', {
         effect: 'slide',
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: 'auto-fit',
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -82,27 +86,21 @@ const Home = {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        initialSlide: 2,
+        initialSlide: initialSlideIndex, // Mengatur indeks item yang akan ditampilkan pertama kali
         on: {
           slideChange: function () {
             const activeIndex = this.realIndex;
             const activeItem = refoods[activeIndex];
-            if (activeItem) {
-              jumbotronContainer.innerHTML = '';
-              const jumbotron = createJumbotron(activeItem);
-              jumbotronContainer.appendChild(jumbotron);
+            jumbotronContainer.innerHTML = '';
+            const jumbotron = createJumbotron(activeItem);
+            jumbotronContainer.appendChild(jumbotron);
 
-              document.querySelectorAll('.refood-slide').forEach(card => {
-                if (card.classList) {
-                  card.classList.remove('clicked');
-                }
-              });
+            document.querySelectorAll('.refood-slide').forEach(card => {
+              card.classList.remove('clicked');
+            });
 
-              const activeCard = refoodContainer.children[activeIndex];
-              if (activeCard && activeCard.classList) {
-                activeCard.classList.add('clicked');
-              }
-            }
+            const activeCard = refoodContainer.children[activeIndex];
+            activeCard.classList.add('clicked');
           },
         },
       });
@@ -117,36 +115,23 @@ const Home = {
           jumbotronContainer.appendChild(jumbotron);
 
           document.querySelectorAll('.refood-slide').forEach(card => {
-            if (card.classList) {
-              card.classList.remove('clicked');
-            }
+            card.classList.remove('clicked');
           });
 
-          if (card.classList) {
-            card.classList.add('clicked');
-          }
+          card.classList.add('clicked');
 
           const slideIndex = Array.from(refoodContainer.children).indexOf(card);
           refoodSlider.slideTo(slideIndex);
         });
 
-        if (index === 2) {
+        if (index === 0) {
           const jumbotron = createJumbotron(item);
           jumbotronContainer.appendChild(jumbotron);
-          if (card.classList) {
-            card.classList.add('clicked');
-          }
         }
       });
-
-      const initialItem = refoods[2];
-      if (initialItem) {
-        jumbotronContainer.innerHTML = '';
-        const jumbotron = createJumbotron(initialItem);
-        jumbotronContainer.appendChild(jumbotron);
-      }
     } catch (error) {
       console.error('Error fetching data:', error);
+      // Handle error
     }
   },
 };
