@@ -20,7 +20,7 @@ const About = {
           <div class="row">
             <div class="col-sm-4">
               <figure>
-                <img id="rizky" class="image-profil" alt="Foto profil Rizky Rizaldi Kurniawan" />
+                <img id="rizky" src="/images/Rizal.png"  class="image-profil" alt="Foto profil Rizky Rizaldi Kurniawan" />
                 <figcaption>
                   <p>Rizky Rizaldi Kurniawan</p>
                   <p>Universitas Negeri Malang</p>
@@ -29,7 +29,7 @@ const About = {
             </div>
             <div class="col-sm-4">
               <figure>
-                <img class="image-profil" alt="Foto profil Kelvin Jaya Pratama" />
+                <img class="image-profil" src="/images/kelvin.jpg" alt="Foto profil Kelvin Jaya Pratama" />
                 <figcaption>
                   <p>Kelvin Jaya Pratama</p>
                   <p>Universitas AMIKOM Yogyakarta</p>
@@ -38,7 +38,7 @@ const About = {
             </div>
             <div class="col-sm-4">
               <figure>
-                <img id="irfan" class="image-profil" alt="Foto profil Muhammad Irfan Abidin" />
+                <img id="irfan" src="/images/kelvin.jpg" class="image-profil" alt="Foto profil Muhammad Irfan Abidin" />
                 <figcaption>
                   <p>Muhammad Irfan Abidin</p>
                   <p>Universitas Muhammadiyah Surakarta</p>

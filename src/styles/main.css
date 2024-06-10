@@ -237,18 +237,6 @@ figcaption p {
   margin: 5px 0;
 }
 
-#rizky {
-  background-image: url('../public/images/Rizal.png'); 
-}
-
-#kelvin {
-  background-image: url('../public/images/kelvin.jpg');; 
-}
-
-#irfan {
-  background-image: url('../public/images/kelvin.jpg');; 
-}
-
 @media (max-width: 768px) {
   .jumbotron-container {
     height: auto;
