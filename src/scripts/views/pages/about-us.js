@@ -50,11 +50,7 @@ const About = {
         </article>
       </div>
       `;
-  },
-
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-  },
+  }
 };
 
 export default About;
