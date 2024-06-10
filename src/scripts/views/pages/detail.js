@@ -32,7 +32,7 @@ const Detail = {
   },
  
   async afterRender() {
-      const url = UrlParser.parseActiveUrlWithOutCombiner();
+      const url = UrlParser.parseActiveUrlWithoutCombiner();
       const refoodsDetail = await RefoodsSource.getRefoodDetail(url.id);
   },
 };
