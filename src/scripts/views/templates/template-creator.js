@@ -27,4 +27,15 @@ const createRefoodSlide = (item) => {
   `;
 };
 
-export { createRefoodCard, createRefoodSlide };
+const createDetailPengolahan = (item) => `
+<div class="card text-bg-light mb-3">
+    <div class="card-header">
+      <h3>Cara Pengolahan:</h3>
+    </div>
+    <div class="card-body">
+      <p class="card-text">${item.caraPengolahan.teks}</p>
+    </div>
+</div>
+`;
+
+export { createRefoodCard, createRefoodSlide, createDetailPengolahan };

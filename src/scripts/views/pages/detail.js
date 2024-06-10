@@ -1,6 +1,6 @@
 import RefoodsSource from '../../data/refood-source';
-import CONFIG from '../../globals/config';
 import UrlParser from '../../routes/url-parser';
+import { createDetailPengolahan } from '../templates/template-creator';
 
 const Detail = {
   async render() {
@@ -9,12 +9,6 @@ const Detail = {
         <img id="logo-detail" src="../public/Logo.png" class="rounded mx-auto d-block mb-5" alt="..." />
 
         <div class="list-pengolahan">
-          <div class="card text-bg-light mb-3">
-            <div class="card-header"><h3>Cara Pengolahan:</h3></div>
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
         </div>
 
         <form>
@@ -34,6 +28,14 @@ const Detail = {
   async afterRender() {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const refoodsDetail = await RefoodsSource.getRefoodDetail(url.id);
+      // console.log(refoodsDetail);
+
+      const listContainer = document.querySelector('.list-pengolahan');
+      listContainer.innerHTML ='';
+
+      refoodsDetail.forEach((item) => {
+        listContainer.innerHTML += createDetailPengolahan(item);
+      });
   },
 };
  
