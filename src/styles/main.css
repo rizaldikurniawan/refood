@@ -237,6 +237,73 @@ figcaption p {
   margin: 5px 0;
 }
 
+/* detail page */
+.container-detail {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+#logo-detail {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.form {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+}
+
+.form-label {
+  color: var(--primary-color);
+}
+
+#cara-pengolahan {
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#add-processing-form button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#add-processing-form button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+.card {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
   .jumbotron-container {
     height: auto;
@@ -254,5 +321,13 @@ figcaption p {
   .col-md-2,
   .col-md-3 {
     max-width: 100%;
+  }
+
+  .container-detail {
+    padding: 1rem;
+  }
+
+  #logo-detail {
+    max-width: 100px;
   }
 }

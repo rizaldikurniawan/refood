@@ -4,8 +4,10 @@ import About from '../views/pages/about-us';
 
 const routes = {
   '/': Home,
-  '/refood/:id': Detail,
+  '/home': Home,
+  '/detail/:id': Detail,
   '/about-us' : About,
+  
 };
 
 export default routes;

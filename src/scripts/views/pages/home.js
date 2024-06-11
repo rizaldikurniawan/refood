@@ -24,7 +24,7 @@ const Home = {
   async afterRender() {
     try {
       const refoodsData = await RefoodsSource.getAllRefoods();
-      console.log('API response:', refoodsData); // Log the API response
+      console.log('API response:', refoodsData);
 
       if (!refoodsData || !refoodsData.data || !Array.isArray(refoodsData.data.refoods)) {
         throw new Error('Invalid data structure');
@@ -39,7 +39,7 @@ const Home = {
         card.classList.add('refood-slide', 'swiper-slide');
         card.innerHTML = `
           <div class="refood-slide-img">
-            <img src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.png" alt="${item.jenis}">
+            <img src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" alt="${item.jenis}">
           </div>
           <div class="refood-slide-content">
             <h2 class="food-type">${item.jenis}</h2>
@@ -54,7 +54,7 @@ const Home = {
         jumbotron.innerHTML = `
           <div class="col-md-6">
             <div class="image-wrapper">
-              <img id="imageBanner" class="up-layar" src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.png" alt="${item.jenis}" />
+              <img id="imageBanner" class="up-layar" src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" alt="${item.jenis}" />
             </div>
           </div>
           <div class="col-md-2">
@@ -63,11 +63,12 @@ const Home = {
           <div class="col-md-3 rounded" id="description">
             <h1 class="teks"><b>${item.jenis}</b></h1>
             <p class="teks">${item.deskripsi}</p>
-            <a href="#/detail.html/${item.idLimbah}" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
+            <a href="#/detail/${item.idLimbah}" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
           </div>
         `;
         return jumbotron;
       };
+      
 
       const refoodSlider = new Swiper('.refood-slider', {
         effect: 'slide',
