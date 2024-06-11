@@ -5,6 +5,7 @@ import Swiper from 'swiper';
 const Home = {
   async render() {
     return `
+    <div class="container">
       <div class="jumbotron" id="jumbotron"></div>
       <div class="swiper refood-slider">
         <div class="swiper-wrapper" id="refood-cards"></div>
@@ -18,6 +19,7 @@ const Home = {
           <div class="swiper-pagination"></div>
         </div>
       </div>
+    </div>
     `;
   },
 
@@ -68,7 +70,6 @@ const Home = {
         `;
         return jumbotron;
       };
-      
 
       const refoodSlider = new Swiper('.refood-slider', {
         effect: 'slide',
@@ -93,7 +94,7 @@ const Home = {
               const jumbotron = createJumbotron(activeItem);
               jumbotronContainer.appendChild(jumbotron);
 
-              document.querySelectorAll('.refood-slide').forEach(card => {
+              document.querySelectorAll('.refood-slide').forEach((card) => {
                 if (card.classList) {
                   card.classList.remove('clicked');
                 }
@@ -117,7 +118,7 @@ const Home = {
           const jumbotron = createJumbotron(item);
           jumbotronContainer.appendChild(jumbotron);
 
-          document.querySelectorAll('.refood-slide').forEach(card => {
+          document.querySelectorAll('.refood-slide').forEach((card) => {
             if (card.classList) {
               card.classList.remove('clicked');
             }
@@ -145,8 +146,6 @@ const Home = {
         const jumbotron = createJumbotron(initialItem);
         jumbotronContainer.appendChild(jumbotron);
       }
-
-
     } catch (error) {
       console.error('Error fetching data:', error);
     }
