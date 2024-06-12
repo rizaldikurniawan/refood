@@ -53,7 +53,10 @@ const Detail = {
         const caraPengolahanInput = document.getElementById('cara-pengolahan').value.trim();
         if (caraPengolahanInput) {
           try {
-            await RefoodsSource.addRefood(idLimbah, { caraPengolahan: caraPengolahanInput });
+            await RefoodsSource.addRefood(idLimbah, { teks: caraPengolahanInput,
+              idUser: null,
+              namaLengkap: null
+             });
             caraPengolahanContainer.appendChild(createProcessingMethodCard(caraPengolahanInput));
             document.getElementById('cara-pengolahan').value = ''; 
           } catch (error) {
