@@ -163,10 +163,12 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
   color: var(--white);
-  padding: 1rem;
   transition: opacity 0.3s ease;
+}
+
+.refood-slide-img{
+  padding: 1rem;
 }
 
 .refood-slide-content .food-type {
