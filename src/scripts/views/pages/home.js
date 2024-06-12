@@ -5,21 +5,21 @@ import Swiper from 'swiper';
 const Home = {
   async render() {
     return `
-    <div class="container">
       <div class="jumbotron" id="jumbotron"></div>
-      <div class="swiper refood-slider">
-        <div class="swiper-wrapper" id="refood-cards"></div>
-        <div class="refood-slider-control">
-          <div class="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+      <div class="container">
+        <div class="swiper refood-slider">
+          <div class="swiper-wrapper" id="refood-cards"></div>
+          <div class="refood-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
-    </div>
     `;
   },
 
@@ -107,6 +107,14 @@ const Home = {
             }
           },
         },
+      });
+
+      document.querySelector('.swiper-button-next').addEventListener('click', function () {
+        refoodSlider.slideNext();
+      });
+      
+      document.querySelector('.swiper-button-prev').addEventListener('click', function () {
+        refoodSlider.slidePrev();
       });
 
       refoods.forEach((item, index) => {
