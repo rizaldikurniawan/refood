@@ -13,7 +13,7 @@ const Detail = {
         <form id="add-processing-form">
           <div class="mt-4 mb-3 form">
             <label for="cara-pengolahan" class="form-label h3">Menambahkan Cara Pengolahan:</label>
-            <textarea class="form-control" id="cara-pengolahan" rows="3" name="cara-pengolahan"></textarea>
+            <textarea class="form-control" id="cara-pengolahan-form" rows="3" name="cara-pengolahan"></textarea>
           </div>
 
           <div class="d-flex justify-content-end">

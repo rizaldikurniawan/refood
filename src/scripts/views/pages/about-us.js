@@ -3,7 +3,7 @@ const About = {
     return `
         <div id="about">
         <article>
-          <h1 class="judul">Apa itu Website Refood?</h1>
+          <h1 class="judulInformasi">Apa itu Website Refood?</h1>
           <div class="informasi">
               <p>Website ReFood (Recycle Food) menyediakan informasi yang bermanfaat dan cukup lengkap mengenai cara mengolah dan mendaur ulang limbah makanan guna mengurangi pemborosan makanan.</p>
               <ul>
