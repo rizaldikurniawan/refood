@@ -197,7 +197,7 @@ body {
   font-size: 300px;
 }
 
-.judulInformasi{
+.judulInformasi {
   color: #1a4d2e;
 }
 
@@ -312,6 +312,27 @@ figcaption p {
 
 .card-text {
   color: var(--primary-color);
+}
+
+/* register dan login */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

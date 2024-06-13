@@ -13,19 +13,19 @@ const Register = {
               <div class="card-body">
                 <form id="register-form">
                   <div class="form-group">
-                    <label for="username">Username</label>
+                    <label class="teks" for="username">Username</label>
                     <input type="text" class="form-control" id="username" name="username" required>
                   </div>
                   <div class="form-group">
-                    <label for="email">Email</label>
+                    <label class="teks"  for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
+                    <label class="teks" for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                   </div>
                   <div class="form-group">
-                    <label for="nama_lengkap">Full Name</label>
+                    <label class="teks" for="nama_lengkap">Full Name</label>
                     <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
                   </div>
                   <button type="submit" class="btn btn-primary btn-block">Register</button>
