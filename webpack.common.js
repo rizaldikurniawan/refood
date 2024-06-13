@@ -51,6 +51,13 @@ module.exports = {
             cacheName: 'refood-image-api',
           },
         },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://unpkg.com/swiper@8/swiper-bundle.min.css'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'external-resources',
+          },
+        },
       ],
     }),
   ],
