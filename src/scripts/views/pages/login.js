@@ -45,6 +45,8 @@ const Login = {
       try {
         const response = await RefoodsSource.login(username, password);
         localStorage.setItem('token', response.data.token);
+        // localStorage.setItem('id_user', id_user);
+        // localStorage.setItem('nama_lengkap', nama_lengkap);
         alert('Login successful!');
         window.location.hash = '#/home';
       } catch (error) {

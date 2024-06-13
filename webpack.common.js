@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
  
 module.exports = {
   entry: {
@@ -30,6 +31,25 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
+        },
+      ],
+    }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('http://54.254.164.76:5000'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'refood-api',
+          },
+        },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('http://54.254.164.76:5000/images/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'refood-image-api',
+          },
         },
       ],
     }),

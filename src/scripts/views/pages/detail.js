@@ -7,7 +7,6 @@ const Detail = {
         <img id="logo-detail" src="/Logo.png" class="rounded mx-auto d-block mb-5" alt="Logo" />
 
         <div class="list-pengolahan" id="cara-pengolahan-container">
-
         </div>
 
         <form id="add-processing-form">
@@ -53,9 +52,12 @@ const Detail = {
         const caraPengolahanInput = document.getElementById('cara-pengolahan').value.trim();
         if (caraPengolahanInput) {
           try {
+            const id_user = localStorage.getItem('id_user');
+            const nama_lengkap = localStorage.getItem('nama_lengkap');
+
             await RefoodsSource.addRefood(idLimbah, { teks: caraPengolahanInput,
-              idUser: null,
-              namaLengkap: null
+              idUser: id_user,
+              namaLengkap: nama_lengkap
              });
             caraPengolahanContainer.appendChild(createProcessingMethodCard(caraPengolahanInput));
             document.getElementById('cara-pengolahan').value = ''; 

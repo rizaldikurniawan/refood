@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import App from './views/app';
 import '../styles/main.css';
+import swRegister from './utils/sw-register';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App({
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     app.renderPage();
     updateNavbar();
+    swRegister();
   });
   
   // Log out

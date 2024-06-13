@@ -20,6 +20,7 @@
     "css-loader": "^7.1.2",
     "eslint": "^9.4.0",
     "html-webpack-plugin": "^5.6.0",
+    "http-server": "^14.1.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
@@ -27,8 +28,11 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "install": "^0.13.0",
     "regenerator-runtime": "^0.14.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "workbox-webpack-plugin": "^7.1.0",
+    "workbox-window": "^7.1.0"
   }
 }
