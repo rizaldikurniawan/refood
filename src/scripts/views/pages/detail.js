@@ -7,7 +7,7 @@ const Detail = {
         <img id="logo-detail" src="/Logo.png" class="rounded mx-auto d-block mb-5" alt="Logo" />
 
         <div class="list-pengolahan" id="cara-pengolahan-container">
-          <!-- List of processing methods will be rendered here -->
+
         </div>
 
         <form id="add-processing-form">

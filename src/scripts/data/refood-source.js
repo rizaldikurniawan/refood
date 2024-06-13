@@ -44,6 +44,40 @@ class RefoodsSource {
     }
   }
 
+  static async editRefood(idLimbah, idPengolahan) {
+    try {
+      const requestOptions = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(refoodData),
+      };
+      const response = await fetch(API_ENDPOINT.EDIT_REFOOD(idLimbah, idPengolahan), requestOptions);
+      if (!response.ok) {
+        throw new Error('Failed to edit refood');
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error editing refood: ${error.message}`);
+    }
+  }
+
+  static async deleteRefood(idLimbah, idPengolahan) {
+    try {
+      const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(refoodData),
+      };
+      const response = await fetch(API_ENDPOINT.DELETE_REFOOD(idLimbah, idPengolahan), requestOptions);
+      if (!response.ok) {
+        throw new Error('Failed to delete refood');
+      }
+      return response.json();
+    } catch (error) {
+      throw new Error(`Error deleting refood: ${error.message}`);
+    }
+  }
+
   static async login(username, password) {
     try {
       const requestOptions = {
