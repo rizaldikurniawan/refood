@@ -11,6 +11,8 @@ const Detail = {
 
         <form id="add-processing-form">
           <div class="mt-4 mb-3 form">
+           <label for="Contributor" class="form-label h3">Contributor:</label>
+           <input type="text" class="form-control" id="contributor" name="contributor" required>
             <label for="cara-pengolahan" class="form-label h3">Menambahkan Cara Pengolahan:</label>
             <textarea class="form-control" id="cara-pengolahan" rows="3" name="cara-pengolahan"></textarea>
           </div>
@@ -40,7 +42,7 @@ const Detail = {
       const caraPengolahanContainer = document.getElementById('cara-pengolahan-container');
       if (caraPengolahan && caraPengolahan.length > 0) {
         caraPengolahan.forEach(method => {
-          caraPengolahanContainer.appendChild(createProcessingMethodCard(method.teks));
+          caraPengolahanContainer.appendChild(createProcessingMethodCard(method.teks, method.namaLengkap, method.createdAt));
         });
       } else {
         caraPengolahanContainer.innerHTML = '<p>No processing methods available.</p>';
@@ -49,17 +51,16 @@ const Detail = {
       const addProcessingForm = document.getElementById('add-processing-form');
       addProcessingForm.addEventListener('submit', async (event) => {
         event.preventDefault();
+        const contributorInput = document.getElementById('contributor').value.trim();
         const caraPengolahanInput = document.getElementById('cara-pengolahan').value.trim();
         if (caraPengolahanInput) {
           try {
-            const id_user = localStorage.getItem('id_user');
-            const nama_lengkap = localStorage.getItem('nama_lengkap');
-
             await RefoodsSource.addRefood(idLimbah, { teks: caraPengolahanInput,
-              idUser: id_user,
-              namaLengkap: nama_lengkap
+              namaLengkap: contributorInput,
              });
-            caraPengolahanContainer.appendChild(createProcessingMethodCard(caraPengolahanInput));
+            caraPengolahanContainer.appendChild(createProcessingMethodCard(caraPengolahanInput, contributorInput, new Date().toISOString()));
+
+            document.getElementById('contributor').value = ''; 
             document.getElementById('cara-pengolahan').value = ''; 
           } catch (error) {
             console.error('Error adding processing method:', error);
@@ -77,13 +78,15 @@ const Detail = {
   },
 };
 
-function createProcessingMethodCard(text) {
+function createProcessingMethodCard(teks, namaLengkap, createdAt) {
   const card = document.createElement('div');
   card.classList.add('card', 'text-bg-light', 'mb-3');
   card.innerHTML = `
-    <div class="card-header"><h3>Cara Pengolahan:</h3></div>
+    <div class="card-header">
+    <h3>Cara Pengolahan:</h3>
+    Created by ${namaLengkap} at ${createdAt}</div>
     <div class="card-body">
-      <p class="card-text">${text}</p>
+      <p class="card-text">${teks}</p>
     </div>
   `;
   return card;
