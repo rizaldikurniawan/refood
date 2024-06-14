@@ -80,7 +80,7 @@ body {
 #judul {
   color: antiquewhite;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 250%;
 }
 
 #description {
@@ -347,7 +347,7 @@ footer{
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .jumbotron-container {
     height: auto;
   }
