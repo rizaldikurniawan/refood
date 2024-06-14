@@ -1,4 +1,5 @@
 import RefoodsSource from '../../data/refood-source';
+import CONFIG from '../../globals/config';
 
 const Detail = {
   async render() {
@@ -38,6 +39,8 @@ const Detail = {
       }
 
       const { jenis, deskripsi, picture, caraPengolahan } = refoodDetail.data.refood;
+      const imageContainer = document.getElementById('logo-detail');
+      imageContainer.src = `${CONFIG.BASE_IMAGE_URL}${picture}.webp`;
 
       const caraPengolahanContainer = document.getElementById('cara-pengolahan-container');
       if (caraPengolahan && caraPengolahan.length > 0) {
