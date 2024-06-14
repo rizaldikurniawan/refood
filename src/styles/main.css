@@ -80,7 +80,7 @@ body {
 #judul {
   color: antiquewhite;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 250%;
 }
 
 #description {
@@ -93,8 +93,6 @@ body {
 }
 
 #cara-pengolahan {
-  background-color: var(--secondary-color);
-  color: white;
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -106,6 +104,10 @@ body {
   min-width: 44px;
   min-height: 44px;
   border: none;
+}
+
+form{
+  color: var(--secondary-color);
 }
 
 .teks {
@@ -347,7 +349,7 @@ footer{
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .jumbotron-container {
     height: auto;
   }
