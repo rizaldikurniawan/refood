@@ -21,7 +21,7 @@ const About = {
           <div class="row">
             <div class="col-sm-4">
               <figure>
-                <img id="rizky" class="image-profil lazyload" data-src="/images/Rizal.png"
+                <img id="rizky" class="image-profil lazyload" data-src="/images/rizal.png"
                 alt="Foto profil Rizky Rizaldi Kurniawan" />
                 <figcaption>
                   <p>Rizky Rizaldi Kurniawan</p>
@@ -31,7 +31,7 @@ const About = {
             </div>
             <div class="col-sm-4">
               <figure>
-                <img class="image-profil lazyload" data-src="/images/kelvin.jpg" 
+                <img class="image-profil lazyload" data-src="/images/kelvin.png" 
                 alt="Foto profil Kelvin Jaya Pratama" />
                 <figcaption>
                   <p>Kelvin Jaya Pratama</p>
