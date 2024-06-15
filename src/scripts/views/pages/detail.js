@@ -50,7 +50,7 @@ const Detail = {
       document.getElementById('waste-description').textContent = refood.deskripsi;
 
       const caraPengolahanContainer = document.getElementById('cara-pengolahan-container');
-      caraPengolahanContainer.innerHTML = ''; // Clear previous content
+      caraPengolahanContainer.innerHTML = '';
 
       if (refood.caraPengolahan && refood.caraPengolahan.length > 0) {
         refood.caraPengolahan.forEach(method => {

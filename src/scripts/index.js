@@ -2,7 +2,8 @@ import 'regenerator-runtime';
 import App from './views/app';
 import '../styles/main.css';
 import swRegister from './utils/sw-register';
-import('../animasi/animations')
+
+import('../animasi/animations');
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App({
