@@ -83,6 +83,10 @@ body {
   font-size: 250%;
 }
 
+.icon{
+  max-height: 60px;
+}
+
 #description {
   margin: 0;
   padding: 20px;
@@ -415,5 +419,9 @@ footer{
 
   #logo-detail {
     max-width: 100px;
+  }
+
+  #judul{
+    display: none;
   }
 }
