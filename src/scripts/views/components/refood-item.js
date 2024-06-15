@@ -29,7 +29,6 @@ function createProcessingMethodCard(method, idLimbah) {
 
   const editButton = card.querySelector('.edit-button');
   const editForm = card.querySelector('.edit-form');
-  const saveButton = card.querySelector('.save-button');
   const cancelButton = card.querySelector('.cancel-button');
   const cardText = card.querySelector('.card-text');
   const cardTanggal = card.querySelector('.tanggal');
