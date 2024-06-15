@@ -1,5 +1,4 @@
-const createRefoodCard = (item) => {
-  return `
+const createRefoodCard = (item) => `
     <div class="col-md-6">
       <div class="image-wrapper">
         <img id="imageBanner" class="up-layar" src="${item.picture}" alt="${item.jenis}" />
@@ -14,10 +13,8 @@ const createRefoodCard = (item) => {
       <a href="/detail.html?id=${item.idLimbah}" class="btn btn-primary" id="cara-pengolahan">Cara Pengolahan</a>
     </div>
   `;
-};
 
-const createRefoodSlide = (item) => {
-  return `
+const createRefoodSlide = (item) => `
     <div class="refood-slide-img">
       <img src="${item.picture}" alt="${item.jenis}">
     </div>
@@ -25,7 +22,6 @@ const createRefoodSlide = (item) => {
       <h2 class="food-type">${item.jenis}</h2>
     </div>
   `;
-};
 
 const createDetailPengolahan = (item) => `
 <div class="card text-bg-light mb-3">

@@ -7,16 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new App({
     button: document.querySelector('#hamburgerButton'),
     drawer: document.querySelector('#navbarSupportedContent'),
-    content: document.querySelector('#mainContent')
+    content: document.querySelector('#mainContent'),
   });
 
   window.addEventListener('hashchange', () => {
     app.renderPage();
   });
-  
+
   window.addEventListener('load', () => {
     app.renderPage();
     swRegister();
   });
-
 });

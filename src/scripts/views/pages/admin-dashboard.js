@@ -36,7 +36,7 @@ const AdminDashboard = {
 
           const caraPengolahanContainer = document.getElementById(`cara-pengolahan-${refood.idLimbah}`);
           if (refood.caraPengolahan && refood.caraPengolahan.length > 0) {
-            refood.caraPengolahan.forEach(method => {
+            refood.caraPengolahan.forEach((method) => {
               caraPengolahanContainer.appendChild(createProcessingMethodCard(method, refood.idLimbah));
             });
           } else {

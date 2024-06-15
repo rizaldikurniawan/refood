@@ -53,7 +53,7 @@ const Detail = {
       caraPengolahanContainer.innerHTML = ''; // Clear previous content
 
       if (refood.caraPengolahan && refood.caraPengolahan.length > 0) {
-        refood.caraPengolahan.forEach(method => {
+        refood.caraPengolahan.forEach((method) => {
           caraPengolahanContainer.appendChild(createProcessingMethodCard(method));
         });
       } else {
@@ -89,7 +89,6 @@ const Detail = {
           alert('Failed to add processing method. Please try again later.');
         }
       });
-
     } catch (error) {
       console.error('Error fetching refood detail:', error);
       alert('Failed to load refood details. Please try again later.');
@@ -108,7 +107,7 @@ function createProcessingMethodCard(method) {
       <p class="card-text">${method.teks}</p>
     </div>
     <div class="card-footer">
-      <div class="username">${method.username}</div>
+      <div class="username">Created by : ${method.username}</div>
       <div class="tanggal">${new Date(method.createdAt).toLocaleDateString()}</div>
     </div>
   `;

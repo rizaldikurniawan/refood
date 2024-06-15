@@ -1,6 +1,6 @@
+import Swiper from 'swiper';
 import RefoodsSource from '../../data/refood-source';
 import CONFIG from '../../globals/config';
-import Swiper from 'swiper';
 
 const Home = {
   async render() {
@@ -33,7 +33,7 @@ const Home = {
         throw new Error('Invalid data structure');
       }
 
-      const refoods = refoodsData.data.refoods;
+      const { refoods } = refoodsData.data;
       const jumbotronContainer = document.getElementById('jumbotron');
       const refoodContainer = document.getElementById('refood-cards');
 
@@ -57,7 +57,8 @@ const Home = {
         jumbotron.innerHTML = `
           <div class="col-md-6">
             <div class="image-wrapper">
-              <img id="imageBanner" class="up-layar" src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" alt="${item.jenis}" />
+              <img id="imageBanner" class="up-layar" src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" 
+              alt="${item.jenis}" />
             </div>
           </div>
           <div class="col-md-2">
@@ -87,7 +88,7 @@ const Home = {
         },
         initialSlide: 2,
         on: {
-          slideChange: function () {
+          slideChange() {
             const activeIndex = this.realIndex;
             const activeItem = refoods[activeIndex];
             if (activeItem) {
@@ -110,11 +111,11 @@ const Home = {
         },
       });
 
-      document.querySelector('.swiper-button-next').addEventListener('click', function () {
+      document.querySelector('.swiper-button-next').addEventListener('click', () => {
         refoodSlider.slideNext();
       });
-      
-      document.querySelector('.swiper-button-prev').addEventListener('click', function () {
+
+      document.querySelector('.swiper-button-prev').addEventListener('click', () => {
         refoodSlider.slidePrev();
       });
 

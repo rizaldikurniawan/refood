@@ -5,7 +5,8 @@ const About = {
         <article>
           <h1 class="judulInformasi">Apa itu Website Refood?</h1>
           <div class="informasi">
-              <p>Website ReFood (Recycle Food) menyediakan informasi yang bermanfaat dan cukup lengkap mengenai cara mengolah dan mendaur ulang limbah makanan guna mengurangi pemborosan makanan.</p>
+              <p>Website ReFood (Recycle Food) menyediakan informasi yang bermanfaat dan cukup lengkap mengenai 
+              cara mengolah dan mendaur ulang limbah makanan guna mengurangi pemborosan makanan.</p>
               <ul>
                 <p><b>Fitur - fitur pada website:</b></p>
                 <li>Mencari informasi tentang limbah makanan</li>
@@ -20,7 +21,8 @@ const About = {
           <div class="row">
             <div class="col-sm-4">
               <figure>
-                <img id="rizky" src="/images/Rizal.png"  class="image-profil" alt="Foto profil Rizky Rizaldi Kurniawan" />
+                <img id="rizky" src="/images/Rizal.png"  class="image-profil" 
+                alt="Foto profil Rizky Rizaldi Kurniawan" />
                 <figcaption>
                   <p>Rizky Rizaldi Kurniawan</p>
                   <p>Universitas Negeri Malang</p>
@@ -53,7 +55,7 @@ const About = {
   },
 
   async afterRender() {
-    document.title = 'ReFood | About Us'; 
+    document.title = 'ReFood | About Us';
   },
 };
 
