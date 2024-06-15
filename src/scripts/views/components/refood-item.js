@@ -19,8 +19,8 @@ function createProcessingMethodCard(method, idLimbah) {
     <form class="edit-form" style="display: none;">
         <div class="mb-3">
           <label for="edit-text-${method.idPengolahan}" class="form-label">Edit Processing Method:</label>
-          <textarea class="form-control" id="edit-text-${method.idPengolahan}"
-           rows="3" required>${method.teks}</textarea>
+          <textarea class="form-control" id="edit-text-${method.idPengolahan}" 
+          rows="3" required>${method.teks}</textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-sm save-button">Save</button>
         <button type="button" class="btn btn-secondary btn-sm cancel-button">Cancel</button>

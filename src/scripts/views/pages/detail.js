@@ -53,7 +53,7 @@ const Detail = {
       caraPengolahanContainer.innerHTML = ''; // Clear previous content
 
       if (refood.caraPengolahan && refood.caraPengolahan.length > 0) {
-        refood.caraPengolahan.forEach((method) => {
+        refood.caraPengolahan.forEach(method => {
           caraPengolahanContainer.appendChild(createProcessingMethodCard(method));
         });
       } else {
