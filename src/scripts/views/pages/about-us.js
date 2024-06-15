@@ -31,7 +31,7 @@ const About = {
             </div>
             <div class="col-sm-4">
               <figure>
-                <img class="image-profil lazyload" data-src="/images/kelvin.png" 
+                <img id="kelvin" class="image-profil lazyload" data-src="/images/kelvin.png" 
                 alt="Foto profil Kelvin Jaya Pratama" />
                 <figcaption>
                   <p>Kelvin Jaya Pratama</p>
