@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import RefoodsSource from '../../data/refood-source';
 import CONFIG from '../../globals/config';
+import 'lazysizes';
 
 const Home = {
   async render() {
@@ -42,7 +43,7 @@ const Home = {
         card.classList.add('refood-slide', 'swiper-slide');
         card.innerHTML = `
           <div class="refood-slide-img">
-            <img src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" alt="${item.jenis}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + item.idLimbah}.webp" alt="${item.jenis}">
           </div>
           <div class="refood-slide-content">
             <h2 class="food-type">${item.jenis}</h2>
