@@ -24,6 +24,7 @@ const Home = {
   },
 
   async afterRender() {
+    document.title = 'ReFood | Home';
     try {
       const refoodsData = await RefoodsSource.getAllRefoods();
       console.log('API response:', refoodsData);

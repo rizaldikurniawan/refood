@@ -53,7 +53,7 @@ const About = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    document.title = 'ReFood | About Us'; 
   },
 };
 

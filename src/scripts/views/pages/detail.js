@@ -5,19 +5,23 @@ const Detail = {
   async render() {
     return `
       <div class="container-xl mx-auto p-4 container-detail">
-        <img id="logo-detail" src="/Logo.png" class="rounded mx-auto d-block mb-5" alt="Logo" />
-
-        <div class="list-pengolahan" id="cara-pengolahan-container">
+        <div class="text-center mb-5">
+          <div class="image-wrapper">
+            <img id="waste-image" src="" class="waste-image rounded mx-auto d-block mb-3" alt="" />
+          </div>
+          <h1 id="waste-name" class="mt-3"></h1>
+          <p id="waste-description" class="text-muted"></p>
         </div>
-
-        <form id="add-processing-form">
-          <div class="mt-4 mb-3 form">
-           <label for="Contributor" class="form-label h3">Contributor:</label>
-           <input type="text" class="form-control" id="contributor" name="contributor" required>
+        <div class="list-pengolahan mb-5" id="cara-pengolahan-container"></div>
+        <form id="add-processing-form" class="form">
+          <div class="mt-3 mb-3">
+            <label for="username" class="form-label h3">Contributor:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="mt-4 mb-3">
             <label for="cara-pengolahan" class="form-label h3">Menambahkan Cara Pengolahan:</label>
             <textarea class="form-control" id="cara-pengolahan" rows="3" name="cara-pengolahan"></textarea>
           </div>
-
           <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-dark btn-sm">Tambah</button>
           </div>
@@ -32,45 +36,57 @@ const Detail = {
       const idLimbah = url.split('/')[2];
 
       const refoodDetail = await RefoodsSource.getRefoodDetail(idLimbah);
-      console.log('Refood detail:', refoodDetail);
 
-      if (!refoodDetail || !refoodDetail.data || !refoodDetail.data.refood) {
+      if (!refoodDetail || refoodDetail.status === 'fail') {
         throw new Error('Invalid refood detail data');
       }
 
-      const { jenis, deskripsi, picture, caraPengolahan } = refoodDetail.data.refood;
-      const imageContainer = document.getElementById('logo-detail');
-      imageContainer.src = `${CONFIG.BASE_IMAGE_URL}${picture}.webp`;
+      const { refood } = refoodDetail.data;
+      document.title = `ReFood | ${refood.jenis}`;
+
+      document.getElementById('waste-image').src = `${CONFIG.BASE_IMAGE_URL}${idLimbah}.webp`;
+      document.getElementById('waste-image').alt = refood.jenis;
+      document.getElementById('waste-name').textContent = refood.jenis;
+      document.getElementById('waste-description').textContent = refood.deskripsi;
 
       const caraPengolahanContainer = document.getElementById('cara-pengolahan-container');
-      if (caraPengolahan && caraPengolahan.length > 0) {
-        caraPengolahan.forEach(method => {
-          caraPengolahanContainer.appendChild(createProcessingMethodCard(method.teks, method.namaLengkap, method.createdAt));
+      caraPengolahanContainer.innerHTML = ''; // Clear previous content
+
+      if (refood.caraPengolahan && refood.caraPengolahan.length > 0) {
+        refood.caraPengolahan.forEach(method => {
+          caraPengolahanContainer.appendChild(createProcessingMethodCard(method));
         });
       } else {
         caraPengolahanContainer.innerHTML = '<p>No processing methods available.</p>';
       }
 
-      const addProcessingForm = document.getElementById('add-processing-form');
-      addProcessingForm.addEventListener('submit', async (event) => {
+      document.getElementById('add-processing-form').addEventListener('submit', async (event) => {
         event.preventDefault();
-        const contributorInput = document.getElementById('contributor').value.trim();
-        const caraPengolahanInput = document.getElementById('cara-pengolahan').value.trim();
-        if (caraPengolahanInput) {
-          try {
-            await RefoodsSource.addRefood(idLimbah, { teks: caraPengolahanInput,
-              namaLengkap: contributorInput,
-             });
-            caraPengolahanContainer.appendChild(createProcessingMethodCard(caraPengolahanInput, contributorInput, new Date().toISOString()));
+        const caraPengolahanText = document.getElementById('cara-pengolahan').value.trim();
+        const username = document.getElementById('username').value.trim();
 
-            document.getElementById('contributor').value = ''; 
-            document.getElementById('cara-pengolahan').value = ''; 
-          } catch (error) {
-            console.error('Error adding processing method:', error);
-            alert('Failed to add processing method. Please try again.');
+        if (!caraPengolahanText || !username) {
+          alert('Please enter both processing method and username.');
+          return;
+        }
+
+        try {
+          const result = await RefoodsSource.addRefood(idLimbah, { teks: caraPengolahanText, username });
+
+          if (result.status === 'success') {
+            document.getElementById('cara-pengolahan').value = '';
+            document.getElementById('username').value = '';
+            caraPengolahanContainer.appendChild(createProcessingMethodCard({
+              teks: caraPengolahanText,
+              username,
+              createdAt: new Date().toISOString(),
+            }));
+          } else {
+            throw new Error('Failed to add processing method.');
           }
-        } else {
-          alert('Please enter a processing method.');
+        } catch (error) {
+          console.error('Error adding processing method:', error);
+          alert('Failed to add processing method. Please try again later.');
         }
       });
 
@@ -81,15 +97,19 @@ const Detail = {
   },
 };
 
-function createProcessingMethodCard(teks, namaLengkap, createdAt) {
+function createProcessingMethodCard(method) {
   const card = document.createElement('div');
   card.classList.add('card', 'text-bg-light', 'mb-3');
   card.innerHTML = `
     <div class="card-header">
-    <h3>Cara Pengolahan:</h3>
-    Created by ${namaLengkap} at ${createdAt}</div>
+      <h3>Cara Pengolahan:</h3>
+    </div>
     <div class="card-body">
-      <p class="card-text">${teks}</p>
+      <p class="card-text">${method.teks}</p>
+    </div>
+    <div class="card-footer">
+      <div class="username">${method.username}</div>
+      <div class="tanggal">${new Date(method.createdAt).toLocaleDateString()}</div>
     </div>
   `;
   return card;

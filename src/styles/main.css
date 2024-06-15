@@ -26,14 +26,14 @@ body {
 }
 
 .jumbotron-container {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   height: 40vh;
   position: relative;
 }
 
 .image-wrapper {
   width: 100%;
-  height: 450px;
+  height: 300px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -273,6 +273,14 @@ figcaption p {
   display: block;
 }
 
+.waste-image {
+  width: auto;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+
 .form {
   background-color: var(--secondary-color);
   padding: 1rem;
@@ -299,6 +307,7 @@ figcaption p {
 }
 
 .card {
+  padding: 10px;
   background-color: white;
   border: none;
   border-radius: 10px;
@@ -307,17 +316,42 @@ figcaption p {
 }
 
 .card-header {
+  grid-column: 1 / span 2;
   background-color: var(--secondary-color);
   color: white;
   border-radius: 10px 10px 0 0;
 }
 
-.card-body {
-  padding: 1rem;
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  color: var(--primary-color)
 }
 
-.card-text {
-  color: var(--primary-color);
+
+.card-body {
+  grid-column: 1 / span 2;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.tanggal {
+  text-align: right;
+}
+
+.edit-form {
+  background-color: rgb(161, 159, 159);
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.edit-button, .delete-button {
+  margin-top: 10px;
 }
 
 /* register dan login */

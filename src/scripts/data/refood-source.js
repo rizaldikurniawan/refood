@@ -44,10 +44,10 @@ class RefoodsSource {
     }
   }
 
-  static async editRefood(idLimbah, idPengolahan) {
+  static async editRefood(idLimbah, idPengolahan, refoodData) {
     try {
       const requestOptions = {
-        method: 'DELETE',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(refoodData),
       };
@@ -64,9 +64,8 @@ class RefoodsSource {
   static async deleteRefood(idLimbah, idPengolahan) {
     try {
       const requestOptions = {
-        method: 'PUT',
+        method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(refoodData),
       };
       const response = await fetch(API_ENDPOINT.DELETE_REFOOD(idLimbah, idPengolahan), requestOptions);
       if (!response.ok) {
@@ -95,12 +94,12 @@ class RefoodsSource {
     }
   }
 
-  static async register(username, password, nama_lengkap) {
+  static async register(username, password, namaLengkap) {
     try {
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password, nama_lengkap }),
+        body: JSON.stringify({ username, password, namaLengkap }),
       };
       const response = await fetch(API_ENDPOINT.REGISTER, requestOptions);
       if (!response.ok) {
