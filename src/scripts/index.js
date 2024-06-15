@@ -5,6 +5,8 @@ import swRegister from './utils/sw-register';
 
 import('../animasi/animations');
 
+import('../animasi/animations');
+
 document.addEventListener('DOMContentLoaded', () => {
   const app = new App({
     button: document.querySelector('#hamburgerButton'),
