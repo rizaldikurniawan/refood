@@ -27,6 +27,8 @@
         "eqeqeq": "off",
         "max-len": ["error", {
             "code": 120
-        }]
+        }],
+        "arrow-parens":"off"
+        
       }
 }
