@@ -384,11 +384,10 @@ footer{
 }
 
 /* admin */
-.text-center{
+.admin{
   color: var(--primary-color);
   background-color: white;
   border-radius: 5px;
-  
 }
 
 @media (max-width: 1024px) {

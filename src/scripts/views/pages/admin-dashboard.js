@@ -5,7 +5,7 @@ const AdminDashboard = {
   async render() {
     return `
       <div class="container mt-5">
-        <h2 class="text-center">Admin Dashboard</h2>
+        <h2 class="text-center admin">Admin Dashboard</h2>
         <div id="refoods-list" class="list-group"></div>
       </div>
     `;
