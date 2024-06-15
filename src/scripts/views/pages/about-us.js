@@ -41,7 +41,7 @@ const About = {
             </div>
             <div class="col-sm-4">
               <figure>
-                <img id="irfan" class="image-profil lazyload" data-src="/images/kelvin.jpg" 
+                <img id="irfan" class="image-profil lazyload" data-src="/images/irfan.png" 
                 alt="Foto profil Muhammad Irfan Abidin" />
                 <figcaption>
                   <p>Muhammad Irfan Abidin</p>
