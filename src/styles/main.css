@@ -383,6 +383,14 @@ footer{
   text-align: center;
 }
 
+/* admin */
+.text-center{
+  color: var(--primary-color);
+  background-color: white;
+  border-radius: 5px;
+  
+}
+
 @media (max-width: 1024px) {
   .jumbotron-container {
     height: auto;
