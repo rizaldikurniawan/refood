@@ -9,7 +9,7 @@ const About = {
               cara mengolah dan mendaur ulang limbah makanan guna mengurangi pemborosan makanan.</p>
               <ul>
                 <p><b>Fitur - fitur pada website:</b></p>
-                <li>Mencari informasi tentang limbah makanan</li>
+                <li>Menampilkan informasi atau deskripsi tentang limbah makanan</li>
                 <li>Menampilkan bagaimana cara mengolah limbah makanan</li>
                 <li>Pengguna dapat menambahkan informasi baru tentang bagaimana cara mengolah limbah makanan</li>
               </ul>
