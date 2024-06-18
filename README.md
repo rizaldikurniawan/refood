@@ -9,12 +9,12 @@ To get started running the project locally, please follow the steps below.
 First, clone the repository.
 
 ```bash
-  https://github.com/rizaldikurniawan/refood.git
+ git clone https://github.com/rizaldikurniawan/refood.git
 ```
 Then, install dependencies and fetch data to your local machine. **Note that we use NPM**
 
 ```bash
-cd ReFood
+cd refood
 npm install
 ```
 
